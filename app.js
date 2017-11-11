@@ -14,6 +14,10 @@ function createWindow() {
       height: 390, 
       minWidth: 302, 
       minHeight: 390, 
+      frame: false,
+      resizable: false,
+      maximizable: false,
+      title: "Battery Watcher"
     });
   
     win.loadURL(url.format({
@@ -24,17 +28,19 @@ function createWindow() {
   } 
   
   // Create window on electron intialization
-  app.on('ready', createWindow)
+  app.on('ready', createWindow);
+
   // Quit when all windows are closed.
   app.on('window-all-closed', function () {
     // On macOS specific close process
     if (process.platform !== 'darwin') {
-      app.quit()
+      app.quit();
     }
-  })
+  });
+
   app.on('activate', function () {
     // macOS specific close process
     if (win === null) {
-      createWindow()
+      createWindow();
     }
-  })
+  });

@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/ochui/Battery-watcher/issues"
   },
-  "homepage": "https://github.com/ochui/Battery-watcher#readme"
+  "homepage": "https://github.com/ochui/Battery-watcher#readme",
+  "devDependencies": {
+    "electron": "1.7.9"
+  }
 }

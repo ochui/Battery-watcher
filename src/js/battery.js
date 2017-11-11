@@ -2,7 +2,7 @@
   'use strict';
 
   var battery;
-
+  var notification = new Notification("Hi there!");
   function toTime(sec) {
     sec = parseInt(sec, 10);
 

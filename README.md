@@ -23,12 +23,10 @@ These instructions will get you a copy of the project up and running on your loc
    
    ``` $ git clone https://github.com/ochui/Battery-watcher.git ```
  - Install Project Dependencies
-	``` $ npm install
-	```
+   ``` $ npm install```
 	
  - Run App
-	```$ npm start
-	```
+   ```$ npm start```
 
 
 ## Built With

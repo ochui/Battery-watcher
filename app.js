@@ -18,7 +18,8 @@ function createWindow() {
     resizable: false,
     maximizable: false,
     title: "Battery Watcher",
-    icon: path.join(__dirname, '/src/images/battery-icon.png')
+    icon: path.join(__dirname, '/src/images/battery-icon.png'),
+    show: false
   });
 
   win.loadURL(url.format({
@@ -27,6 +28,9 @@ function createWindow() {
     slashes: true
   }));
   trayIcon.showTrayMenu();
+  win.once('ready-to-show', () => {
+    win.show();
+  });
 }
 
 // Create window on electron intialization

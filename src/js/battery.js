@@ -1,8 +1,11 @@
 (function() {
   'use strict';
-
+  const path = require('path');
   var battery;
-  var notification = new Notification("Hi there!");
+  var notification = new Notification("Battery Watcher",{
+    body:"Battery State Monitor Is Running.. ",
+    icon:path.join(__dirname, '/src/images/battery-icon-info.png')
+  });
   function toTime(sec) {
     sec = parseInt(sec, 10);
 
